@@ -1,0 +1,17 @@
+[package]
+name = "candle-gemma4q"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# alias candle-core as "candle" so all candle::* imports match the candle workspace style
+candle = { package = "candle-core", version = "0.10.2", features = ["metal"] }
+candle-nn = { version = "0.10.2", features = ["metal"] }
+clap ={ version = "4.6.1", features = ["derive"] }
+tokenizers = { version = "0.23.1", features = ["onig"] }
+candle-transformers = { version = "0.10.2", features = ["metal"] }
+anyhow = "1.0.102"
+hf-hub = { version="0.5.0", features = ["tokio"] }
+tracing = { version = "0.1.44" }
+tracing-chrome = { version = "0.7.2" }
+tracing-subscriber = { version = "0.3.23" }
